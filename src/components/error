@@ -1,0 +1,31 @@
+if (!email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
+  setError("Enter a valid Email");
+  isValid = false;
+} else if (!email.includes("@")) {
+  setError(" Email must contain @");
+  isValid = false;
+} else {
+  setError("");
+  isValid = true;
+}
+
+if (password.length < 8) {
+  setError("password must contain at least 8 characters");
+  isValid = false;
+} else {
+  setError("");
+}
+querySnapshot.forEach((doc) => {
+  let data = doc.data();
+  if (
+    typeof data.password === "string" &&
+    data.password.trim() === trimmedPassword
+  ) {
+    found = true;
+    console.log("password found");
+
+    localStorage.setItem("user", JSON.stringify(data));
+  } else {
+    console.log("password not found");
+  }
+});

@@ -1,0 +1,162 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  border: 10px solid #ccc;
+  border-top: 4px solid #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.animate {
+  animation: spin 1s linear infinite;
+}
+
+.animate-middle {
+  animation: spin 1.5s linear 2s infinite;
+}
+
+.animate-inner {
+
+  animation: spin 1.5s linear 1s infinite;
+}
+
+.outer {
+  width: 200px;
+  height: 200px;
+}
+
+.middle {
+  width: 140px;
+  height: 140px;
+  top: 30px;
+  opacity: 0.5;
+  left: 30px;
+}
+
+.inner {
+  width: 70px;
+  height: 70px;
+  opacity: 0.5;
+
+  top: 60px;
+  left: 60px;
+}
+
+.funcList li {
+  list-style: none;
+  background-color: #333;
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: large;
+  font-weight: 500;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.funcList li:hover {
+  background-color: rgb(71, 70, 68);
+}
+
+.navLink {
+  background-color: black;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 90%;
+  z-index: 1000;
+}
+
+.navLink li {
+  list-style: none;
+  color: aliceblue;
+}
+
+.navLink li a {
+  color: aliceblue;
+}
+
+.active-nav {
+  background-color: rgb(244, 166, 10);
+  padding: 10px;
+  border-radius: 10px;
+  color: bisque;
+}
+
+.card-div:hover {
+  transform: scale(1.02);
+}
+
+.stack-box {
+  border: 2px solid aliceblue;
+  border-radius: 20px;
+  margin-left: 10%;
+  font-size: 25px;
+}
+
+.table-row th {
+  padding: 10px;
+  text-align: center;
+}
+
+.table-data tr {
+  background-color: #f9f9f9;
+  border: 0.1px solid rgb(172, 170, 170);
+}
+
+.table-data tr td {
+  padding: 8px 10px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.box-div {
+  background-color: #F7931A;
+}
+
+.close-profile {
+  position: absolute;
+  top: 0px;
+  right: 0;
+}
+
+.pop-up p {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid whitesmoke;
+}
+
+.pop-up {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  width: 360px;
+  background-color: black;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  border-radius: 25px;
+}
+
+.package-btn {
+  width: 131px;
+  height: 36px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  font-family: sans-serif
+}
