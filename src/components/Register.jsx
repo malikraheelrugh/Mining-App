@@ -33,7 +33,6 @@ function RegisterUser() {
                     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
                     const firebaseUser = userCredential.user;
                     const uid = firebaseUser.uid;
-                    console.log(uid);
 
                     // Save additional user data in Firestore
                     let data = {
@@ -52,7 +51,6 @@ function RegisterUser() {
                     // Add the generated document id to the data object
                     data.id = docRef.id;
                     localStorage.setItem("dataId", data.id)
-                    console.log(data.id);
 
                     // await addDoc(collection(db, 'users'), data);
 
@@ -69,7 +67,6 @@ function RegisterUser() {
                     setFirebaseError(error.message);
                 }
             } else {
-                console.log("form can not be submitted");
 
             }
         })

@@ -12,13 +12,10 @@ function WithdrawPage(params) {
 
     async function withdrawSubmit(e) {
         e.preventDefault()
-        console.log(userRef);
         const doc = await getDoc(userRef)
 
-        console.log(e.target[0].value);
         startTransition(async () => {
             if (doc.exists()) {
-                console.log(doc.data());
                 const data = doc.data()
                 if (data.claimBalance < e.target[0].value) {
                     alert("insufficient balance")

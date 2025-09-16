@@ -27,7 +27,6 @@ function HomePage(params) {
                 if (typeof data.claimBalance === 'number') {
                     setuserBalance(data.claimBalance);
                 }
-                console.log(data.lastClicked);
                 if (data.lastClicked) {
                     const lastClickedTime = parseInt(data.lastClicked);
                     const currentTime = Date.now();

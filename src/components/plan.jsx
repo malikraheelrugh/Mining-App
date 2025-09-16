@@ -106,8 +106,6 @@ const cardData = [
 
 function InvestmentPlan() {
     const { firebaseData } = useOutletContext();
-    console.log(firebaseData);
-    console.log(firebaseData.claimBalance);
     const [activeIndex, setActiveIndex] = useState(null);
     useEffect(() => {
         const dataId = localStorage.getItem("dataId");

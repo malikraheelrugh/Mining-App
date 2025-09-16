@@ -22,10 +22,8 @@ querySnapshot.forEach((doc) => {
     data.password.trim() === trimmedPassword
   ) {
     found = true;
-    console.log("password found");
 
     localStorage.setItem("user", JSON.stringify(data));
   } else {
-    console.log("password not found");
   }
 });

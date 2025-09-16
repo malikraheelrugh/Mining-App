@@ -26,9 +26,7 @@ function MySelf(params) {
             const snapshot = await getDoc(userRef);
             if (snapshot.exists()) {
                 const data = snapshot.data();
-                console.log(data);
                 let myPackage = data.packageBought
-                console.log(typeof myPackage);
                 if (typeof myPackage === "string") {
                     let withoutComa = myPackage.replace(/,/g, '');
                     numPackage = parseFloat(withoutComa);
