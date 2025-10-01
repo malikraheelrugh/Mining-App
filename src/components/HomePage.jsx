@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { PersonCircle } from 'react-bootstrap-icons';
 import { ArrowRightSquareFill } from 'react-bootstrap-icons';
 import { useNavigate, useOutletContext } from "react-router-dom";
-import "../app.css";
 import { doc, updateDoc, getDoc } from "firebase/firestore";
 import { db } from "./firebase";
 import WithdrawPage from "./withdrawel";
