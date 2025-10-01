@@ -4,11 +4,10 @@ import { ArrowRightSquareFill } from 'react-bootstrap-icons';
 import { useNavigate, useOutletContext } from "react-router-dom";
 import { doc, updateDoc, getDoc } from "firebase/firestore";
 import { db } from "./firebase";
-import WithdrawPage from "./withdrawel";
 function HomePage(params) {
     const { userBalance, setuserBalance } = useOutletContext();
     const { myTodayBalance, setTodaybalance } = useOutletContext();
-    const { firebaseData, setfirebaseData } = useOutletContext();
+    // const { firebaseData, setfirebaseData } = useOutletContext();
     const [showSpinners, setShowSpinners] = useState(false);
     const [time, setTime] = useState("00");
     const [mining, setMining] = useState("0.00000");

@@ -6,6 +6,7 @@ import Rebate from './components/Rebate.jsx';
 import InvestmentPlan from './components/plan.jsx';
 import Stack from './components/stack.jsx';
 import MySelf from './myself.jsx';
+import "./app.css"
 import MainLayout from './components/MainLayout.jsx';
 import WithdrawPage from './components/withdrawel.jsx';
 function App() {
