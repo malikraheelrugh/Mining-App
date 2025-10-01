@@ -4,7 +4,6 @@ import { BootstrapReboot } from 'react-bootstrap-icons';
 import { PersonFill } from 'react-bootstrap-icons';
 import { ArrowsCollapseVertical } from 'react-bootstrap-icons';
 import { NavLink as RouterNavLink } from "react-router-dom";
-import "../app.css";
 
 function NavLink(params) {
 
