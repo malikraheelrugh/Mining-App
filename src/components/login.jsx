@@ -21,7 +21,6 @@ function LoginPage(params) {
             try {
                 const userCredential = await signInWithEmailAndPassword(auth, email, password);
                 const user = userCredential.user;
-                console.log("Logged in:", user.email);
                 found = true;
             } catch (error) {
                 setLoginMessage(`Login failed: ${error.message}`);
@@ -40,7 +39,6 @@ function LoginPage(params) {
         <div className="d-flex flex-column justify-content-evenly align-items-center  vh-100  fs-5 fw-1"
             style={{
                 backgroundColor: "hsl(39.12deg 100% 51.37%)"
-
             }}>
             <div className="topDiv">
                 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" className="bi bi-telephone-forward-fill" viewBox="0 0 16 16">

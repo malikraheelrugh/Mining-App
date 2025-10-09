@@ -63,7 +63,6 @@ function RegisterUser() {
                     setNumber("");
                     navigate("/myHomePage")
                 } catch (error) {
-                    console.error(error.message);
                     setFirebaseError(error.message);
                 }
             } else {
@@ -142,7 +141,7 @@ function RegisterUser() {
                     <button type="submit" disabled={isPending} className="btn btn-dark fw-bold col-11 ms-2 ">{isPending ? "loading..." : "Register"}</button>
                 </div>
                 <p>Already have a acount?
-                    <strong className='text-primary'
+                    <strong className='text-primary' onClick={() => navigate("/login")}
                     >Login</strong>
                 </p>
 

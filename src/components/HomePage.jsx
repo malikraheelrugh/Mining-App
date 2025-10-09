@@ -67,10 +67,8 @@ function HomePage(params) {
             } else if (typeof myPackage === "number") {
                 numPackage = myPackage;
             }
-            console.log(data.lastClicked);
 
         }
-        console.log(numPackage);
         setTodaybalance(numPackage / 100 * 3);
         // Calculate new balance
         let newBalance = currentBalance + numPackage / 100 * 3;
@@ -92,7 +90,6 @@ function HomePage(params) {
         handleClaim();
         setTimeout(() => {
             setShowSpinners(false)
-            console.log("button clicked");
         }, 60000);
         setTime(59)
         const interval = setInterval(() => {
@@ -146,10 +143,8 @@ function HomePage(params) {
                     </center>
                     <ul className="funcList col-11 mt-4">
                         <li onClick={() => navigate("/withdraw")}>Withdrawal  <ArrowRightSquareFill size={24} color="currentColor" /></li>
-                        <li>Top Up <ArrowRightSquareFill size={24} color="currentColor" /></li>
                         <li onClick={handleCopy}>Invite Friends <ArrowRightSquareFill size={24} color="currentColor" /></li>
-                        <li>Vip Area <ArrowRightSquareFill size={24} color="currentColor" /></li>
-                        <li>Stack <ArrowRightSquareFill size={24} color="currentColor" /></li>
+                        <li onClick={() => navigate("/stack")}>Stack <ArrowRightSquareFill size={24} color="currentColor" /></li>
                         <li onClick={() => logoutFunc()}>Logout <ArrowRightSquareFill size={24} color="currentColor" /></li>
                     </ul>
                 </div>

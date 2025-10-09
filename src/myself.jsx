@@ -62,7 +62,7 @@ function MySelf(params) {
             rs: `${todayBalance * 7} PKR`
         },
         {
-            earning: "Last Month Earning",
+            earning: " Monthly Earning",
             rs: `${todayBalance * 30} PKR`
         },
         {
@@ -104,7 +104,6 @@ function MySelf(params) {
                 </div>
                 <ul className="funcList col-11 mt-4  " style={{ paddingBottom: "100px" }}>
                     <li onClick={() => setShowPopup(true)}>Personal Information  <ArrowRightSquareFill size={24} color="currentColor" /></li>
-                    <li >Task ords <ArrowRightSquareFill size={24} color="currentColor" /></li>
                     <li>Daily Statement <ArrowRightSquareFill size={24} color="currentColor" /></li>
                     <li>Team Reports <ArrowRightSquareFill size={24} color="currentColor" /></li>
                     <li onClick={() => seInvitePop(true)}>Invite Friends <ArrowRightSquareFill size={24} color="currentColor" /></li>
