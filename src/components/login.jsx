@@ -4,12 +4,11 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./firebase";
 
 import { db } from './firebase';
-import { collection, query, where, getDocs } from 'firebase/firestore';
 function LoginPage(params) {
     const navigate = useNavigate();
     const [isPending, startTransition] = useTransition();
 
-    const [email, setEmail] = useState("raheelrugh@gmail.com")
+    const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [loginMessage, setLoginMessage] = useState("")
     async function handleSubmit(e) {
@@ -48,7 +47,7 @@ function LoginPage(params) {
             </div>
             {loginMessage && <div className="mt-3 text-center fw-bold ">{loginMessage}</div>}
 
-            <form className="d-flex flex-column col-9 "
+            <form className="d-flex flex-column col-4 "
                 // style={{ background: "repeating-linear-gradient(45deg, black, transparent 100px)" }}
                 onSubmit={handleSubmit}>
                 <h1 className='text-center mb-3' style={{ fontFamily: "fantasy" }}>Login</h1>

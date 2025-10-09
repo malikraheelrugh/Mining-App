@@ -9,7 +9,23 @@ import MySelf from './myself.jsx';
 import "./App.css"
 import MainLayout from './components/MainLayout.jsx';
 import WithdrawPage from './components/withdrawel.jsx';
+import { useState } from 'react';
+import { useEffect } from 'react';
 function App() {
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1500); // Simulate loading
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div id="globalLoader">
+        <div className="loading-spinner"></div>
+      </div>
+    );
+  }
+
   return (
     <BrowserRouter>
       <Routes>
