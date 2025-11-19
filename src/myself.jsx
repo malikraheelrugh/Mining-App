@@ -16,6 +16,7 @@ function MySelf(params) {
     const [inviteRefrel, setInviteRefrel] = useState("")
     const [copyText, setCopyText] = useState("Copy");
     const [todayBalance, setTodayBalance] = useState("");
+    const [data, setData] = useState({});
     useEffect(() => {
 
         const dataId = localStorage.getItem("dataId");
@@ -42,14 +43,16 @@ function MySelf(params) {
     useEffect(() => {
         const userData = localStorage.getItem('user');
         if (userData) {
-            const data = JSON.parse(userData)
-            setName(data.name)
-            setEmail(data.email)
-            setMobile(data.number)
-            setReferralCode(data.refrelCode)
-            setRefrels(0)
-            setAmount(0)
-            setInviteRefrel(data.refrelCode)
+            let data = JSON.parse(userData)
+            console.log(data);
+            setData(data);
+            // setName(data.name)
+            // setEmail(data.email)
+            // setMobile(data.number)
+            // setReferralCode(data.refrelCode)
+            // setRefrels(0)
+            // setAmount(0)
+            // setInviteRefrel(data.refrelCode)
         }
     }, []);
     const dataArray = [
@@ -112,12 +115,10 @@ function MySelf(params) {
                 {showPopup && (
                     <div className="pop-up">
                         <h2>Profile Detail</h2>
-                        <p> <strong>Name:</strong> <span>{name}</span></p>
-                        <p> <strong>Email:</strong> <span>{Email}</span></p>
-                        <p> <strong>Mobile:</strong> <span>{Mobile}</span></p>
-                        <p> <strong>Referral code:</strong> <span>{ReferralCode}</span></p>
-                        <p> <strong>Refrels:</strong> <span>{Refrels}</span></p>
-                        <p> <strong>amount:</strong> <span>{amount}</span></p>
+                        <p> <strong>Name:</strong> <span>{data.name}</span></p>
+                        <p> <strong>Email:</strong> <span>{data.email}</span></p>
+                        <p> <strong>Mobile:</strong> <span>{data.number}</span></p>
+                        <p> <strong>Referral code:</strong> <span>{data.refrelCode}</span></p>
                         <button onClick={() => setShowPopup(false)} className="btn btn-danger">Close</button>
                     </div>
                 )}

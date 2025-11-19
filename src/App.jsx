@@ -9,8 +9,7 @@ import MySelf from './myself.jsx';
 import "./App.css"
 import MainLayout from './components/MainLayout.jsx';
 import WithdrawPage from './components/withdrawel.jsx';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 function App() {
   const [loading, setLoading] = useState(true)
   useEffect(() => {

@@ -1,7 +1,6 @@
-import { auth, db } from './firebase';
+import { db } from './firebase';
 import { doc, Timestamp, getDoc, updateDoc } from "firebase/firestore"
 import { useEffect, useState } from 'react';
-import { useOutletContext } from "react-router-dom";
 
 const cardData = [
     {
@@ -105,7 +104,6 @@ const cardData = [
 ]
 
 function InvestmentPlan() {
-    const { firebaseData } = useOutletContext();
     const [activeIndex, setActiveIndex] = useState(null);
     useEffect(() => {
         const dataId = localStorage.getItem("dataId");
